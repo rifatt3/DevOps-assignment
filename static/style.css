@@ -1,0 +1,61 @@
+body {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.form-inline {
+    margin: 50px auto 150px auto;
+    padding: 10px 20px 10px 20px;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    width: 40%;
+    min-width: 500px;
+    height: 20%;
+}
+
+.marginTopBottom {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    line-height: 2;
+    font-size:medium;
+}
+
+
+
+.mySeparator {
+    height: 0.5px;
+    width: 80%;
+    background-color: whitesmoke;
+}
+
+
+
+
+.btn btn-dark{
+    display: flex;
+    justify-content: center;
+    line-height: 2;
+
+}
+
+.tekrarbutonu {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    line-height: 2;
+}
+.containerim {
+    margin: 50px auto 150px auto;
+    padding: 10px 20px 10px 20px;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    width: 40%;
+    min-width: 500px;
+    height: 20%;
+    
+}

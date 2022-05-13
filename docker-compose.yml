@@ -1,0 +1,36 @@
+version: "3.9"
+
+services:
+
+  api-web:
+    container_name: api-web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    depends_on:
+      - api-db
+    environment:
+      - DB_NAME=postgres
+      - DB_HOST=api-db
+      - DB_PORT=5432
+      - DB_USER=postgres
+      - DB_PASSWORD=testpassword
+    command: python app.py
+
+  api-db:
+    container_name: api-db
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=testpassword
+    volumes:
+      - api-db-volume:/var/lib/postgresql/data
+
+volumes:
+  api-db-volume:
+
+

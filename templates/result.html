@@ -1,0 +1,60 @@
+{% extends 'layout.html'%}
+{% block content %}
+
+<div class="containerim">
+    <div class="row">
+        <div class="col">
+<hr class="mySeparator">
+    <div class="text-center">
+<p class="marginTopBottom" id="Ulkead" >Ülke: {{country_name}}</p>
+<hr class="mySeparator">
+<p class="marginTopBottom" id="Tarih" >Tarih: {{day}}</p>
+<hr class="mySeparator">
+<p class="marginTopBottom" id="yenivaka" >Yeni Vaka: {{yeniVaka}}</p>
+<hr class="mySeparator">
+<p class="marginTopBottom" id="toplamvaka" >Toplam Vaka: {{toplamVaka}}</p>
+<hr class="mySeparator">
+<p class="marginTopBottom" id="yeniolum" >Yeni Ölüm: {{newOlum}}</p>
+<hr class="mySeparator">
+<p class="marginTopBottom" id="toplamolum" >Toplam Ölüm: {{toplamOlum}}</p>
+<hr class="mySeparator">
+
+<a class="tekrarbutonu" href="{{ url_for('index') }}">Tekrar Ara</a>
+</div>
+</div>
+
+<div class="col">
+    
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Tarih</th>
+            <th scope="col">IP</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>23.05.2022 21:00</th>
+            <td>127.0.0.1</td>
+            
+          </tr>
+          <tr>
+            <td>23.05.2022 21:00</th>
+            <td>{{ip}}</td>
+            
+          </tr>
+          <tr>
+            <td>23.05.2022 21:00</th>
+            <td>{{ip}}</td>
+            
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+</div>
+
+
+
+{% endblock content %}

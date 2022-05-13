@@ -1,0 +1,24 @@
+{% extends 'layout.html'%}
+
+{% block content %}
+
+<div class="display-4 text-center">Ülkeye Göre Güncel COVID-19 Bilgileri</div>
+<div class="containerim">
+<form class="form-inline" method="POST" action="{{ url_for('sonuc') }}">
+   
+  <div class="form-group">
+      <div class="input-group">
+          
+              <select name="comp_select" class="selectpicker form-control">
+                {% for o in data["response"] %}
+                <option value="{{ o.country }}">{{ o.country }}</option>
+                {% endfor %}
+              </select>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-dark">Ara</button>
+    </div>
+  </form>
+</div>
+{% endblock content %}
+
